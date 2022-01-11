@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
     <title>Medical client form</title>
 </head>
 <body>
-    
+    <section class="form-section">
+        <div class="form-section__container">
+            <div class="form">
+                <form class="form__body" action="#" method="post">
+                    <h1 class="form__title">Форма регистрации</h1>
+                    <div class="form__attributes">
+                        <div class="form__item">
+                            <label class="form__label" for="surname">Фамилия*</label>
+                            <input class="form__input" id="surname" name="surname" type="text">
+                        </div>
+                        <div class="form__item">
+                            <label class="form__label" for="name">Имя*</label>
+                            <input class="form__input" id="name" name="name" type="text">
+                        </div>
+                        <div class="form__item">
+                            <label class="form__label" for="secondName">Отчество</label>
+                            <input class="form__input" id="secondName" name="secondName" type="text">
+                        </div>
+                        <div class="form__item">
+                            <label class="form__label" for="birthDate">Дата рождения*</label>
+                            <input class="form__input gray" id="birthDate" name="birthDate" type="date">
+                        </div>
+                        <div class="form__item">
+                            <label class="form__label" for="phone">Номер телефона*</label>
+                            <input class="form__input" id="phone" name="phone" type="tel">
+                        </div>
+                        <div class="form__item">
+                            <div class="form__item-title">Пол</div>
+                            <div class="gender">
+                                <div class="gender__item">
+                                    <input class="gender__input" id="male" name="gender" type="radio">
+                                    <label class="gender__label" for="male">Мужской</label>    
+                                </div>
+                                <div class="gender__item">
+                                    <input class="gender__input" id="female" name="gender" type="radio">
+                                    <label class="gender__label" for="female">Женский</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
