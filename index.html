@@ -12,9 +12,10 @@
     <section class="form-section">
         <div class="form-section__container">
             <div class="form">
+                <!-- <h1 class="form__title">Форма создания клиента</h1> -->
                 <form class="form__body" action="#" method="post">
-                    <h1 class="form__title">Форма регистрации</h1>
                     <div class="form__attributes">
+                        <div class="form__subtitle">Форма создания клиента</div>
                         <div class="form__item">
                             <label class="form__label" for="surname">Фамилия*</label>
                             <input class="form__input" id="surname" name="surname" type="text">
@@ -39,16 +40,99 @@
                             <div class="form__item-title">Пол</div>
                             <div class="gender">
                                 <div class="gender__item">
-                                    <input class="gender__input" id="male" name="gender" type="radio">
+                                    <input class="gender__radio" id="male" name="gender" type="radio">
                                     <label class="gender__label" for="male">Мужской</label>    
                                 </div>
                                 <div class="gender__item">
-                                    <input class="gender__input" id="female" name="gender" type="radio">
+                                    <input class="gender__radio" id="female" name="gender" type="radio">
                                     <label class="gender__label" for="female">Женский</label>
                                 </div>
                             </div>
                         </div>
+                        <div class="form__item">
+                            <label class="form__label" for="clientGroup">Группа клиентов*</label>
+                            <select class="form__select" name="clientGroup" id="clientGroup" multiple>
+                                <option class="form__option" value="VIP">VIP</option>
+                                <option class="form__option" value="problematic">Проблемные</option>
+                                <option class="form__option" value="OMC">ОМС</option>
+                            </select>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__label" for="doctor">Лечащий врач</label>
+                            <select class="form__select" name="doctor" id="doctor">
+                                <option class="form__option" value="Ivanov">Иванов</option>
+                                <option class="form__option" value="Saharov">Захаров</option>
+                                <option class="form__option" value="Chernishova">Чернышева</option>
+                            </select>
+                        </div>
+                        <div class="form__SMS">
+                            <input class="form__checkbox" id="SMS" name="SMS" type="checkbox">
+                            <label class="form__label" for="SMS">Не отправлять СМС</label>
+                        </div>
                     </div>
+                    <div class="form__wrapper">                           
+                        <div class="form__address">
+                            <div class="form__subtitle">Адрес</div>
+                            <div class="form__item">
+                                <label class="form__label" for="index">Индекс</label>
+                                <input class="form__input" id="index" name="index" type="text">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label" for="country">Страна</label>
+                                <input class="form__input" id="country" name="country" type="text">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label" for="region">Область</label>
+                                <input class="form__input" id="region" name="region" type="text">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label" for="town">Город*</label>
+                                <input class="form__input" id="town" name="town" type="text">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label" for="street">Улица</label>
+                                <input class="form__input" id="street" name="street" type="text">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label" for="house">Дом</label>
+                                <input class="form__input" id="house" name="house" type="text">
+                            </div>
+                        </div>
+                        <div class="form__passport">
+                            <div class="form__subtitle">Паспорт</div>
+                            <div class="form__item">
+                                <label class="form__label" for="doctor">Тип документа*</label>
+                                <select class="form__select" name="doctor" id="doctor">
+                                    <option class="form__option" value="Ivanov">Паспорт</option>
+                                    <option class="form__option" value="Saharov">Свидетельство о рождении</option>
+                                    <option class="form__option" value="Chernishova">Вод. удостоверение</option>
+                                </select>
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label" for="surname">Серия</label>
+                                <input class="form__input" id="surname" name="surname" type="text">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label" for="surname">Номер</label>
+                                <input class="form__input" id="surname" name="surname" type="text">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label" for="surname">Кем выдан</label>
+                                <input class="form__input" id="surname" name="surname" type="text">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__label" for="surname">Дата выдачи*</label>
+                                <input class="form__input" id="surname" name="surname" type="text">
+                            </div>
+                        </div>
+                    </div>    
+
+                    <!-- </div>
+                        <div class="form__legend">
+                            *Поле обязательное для заполнения.
+                        </div>
+                        <button>Отправить</button>
+                    </div> -->
                 </form>
             </div>
         </div>
