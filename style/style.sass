@@ -1,70 +1,82 @@
-.form-section
-    display: flex
-    flex-direction: column
-    align-items: center
+* 
+    box-sizing: border-box
+section
     background: linear-gradient(85deg, rgba(32,36,161,1) 0%, rgba(48,158,190,1) 100%)
-    background-color: #aacae4
+    
+.form-section
+    // display: flex
+    // flex-direction: column
+    // align-items: center
+    // background: linear-gradient(85deg, rgba(32,36,161,1) 0%, rgba(48,158,190,1) 100%)
+    // background-color: #aacae4
     &__container
-        width: 100%
-        // max-width: 900px
-        margin: 50px
+        // width: 100%
+        // margin: 50px
 .form
     display: flex
     flex-direction: column
-    // &__title
-    //     margin: 0 30px
-    //     padding: 40px 70px 30px 70px 
-    //     border-bottom-style: solid
-    //     border-bottom-width: 4px
-    //     border-bottom-color: black 
-    //     line-height: auto
-    //     font-family: Arial, Helvetica, sans-serif
-    //     font-size: 36px
-    //     color: #000000
-    //     background: #ffffff
+    justify-content: center
+    align-items: center
     &__body
         display: flex
-        justify-content: center
-        padding: 0 100px
+        flex-direction: column
+        // max-width: 1400px
+        padding: 50px
+        // margin: 100px
+    &__title-block
+        // background: #ffffff67
+        // padding: 50px 80px 10px 80px
+        // padding:  35px 0
+    &__title
+        max-width: 500px
+        padding: 10px
+        margin: 0
+        margin-bottom: 50px
+        line-height: auto
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 34px
+        font-weight: 400
+        text-transform: uppercase
+        color: #000000
+        position: relative
+        &::before
+            content: ''
+            height: 1px
+            width: 50px
+            background-color: #344fc9
+            position: absolute
+            bottom: 0
+            left: 10px
+    &__attributes-block
+        display: flex
+        flex-direction: row
+        position: relative
+        &::before
+            content: ''
+            height: 4px
+            width: 100%
+            background: #ffffff81
+            position: absolute
+            top: -4px
+            left: 0
     &__attributes
-        background-color: #ffffff
+        max-width: 800px
+        background-color: #fffffff1
         padding: 40px 70px 50px 70px
-        width: 400px
-        // border-top-style: solid
-        // border-top-width: 4px
-        // border-top-color: black
-        position: relative
-        &::before
-            content: ''
-            height: 20px
-            width: 100%
-            background: #ffffff81
-            border-radius: 3px 0 0 0
-            position: absolute
-            top: -20px
-            left: 0
-    &__wrapper
-        background: #fffffff1
-        padding: 40px 70px
-        width: 250px
-        // border-top-style: solid
-        // border-top-width: 4px
-        // border-top-color: black
-        position: relative
-        &::before
-            content: ''
-            height: 20px
-            width: 100%
-            background: #ffffff81
-            border-radius: 0 3px 0 0
-            position: absolute
-            top: -20px
-            left: 0
+        display: flex
+        flex-direction: column
+        // align-items: flex-end
+        justify-content: space-between
+        &:first-child
+            background-color: #ffffff
+    &__box
+        &:nth-child(2)
+            margin-top: 15px
     &__subtitle
-        margin: 0 0 30px 0
+        margin: 10px 10px 30px 10px
         font-family: Arial, Helvetica, sans-serif
         font-size: 24px
-        font-weight: 600
+        font-weight: 400
         color: #000000
         position: relative
         &::before
@@ -75,26 +87,25 @@
             position: absolute
             bottom: -8px
             left: 0
-
-    &__address
-
-    &__passport
-        margin-top: 40px
+    &__item-wrapper
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        margin: 15px 0
     &__item
         display: flex
         flex-direction: column
-        margin-top: 10px 
-        &:first-child
-            margin-top: 0
-    &__item-title
-        font-family: Arial, Helvetica, sans-serif
-        font-size: 16px
-        margin: 5px 0
+        flex: 1
+        margin: 10px 10px 0 10px
     &__label
         font-family: Arial, Helvetica, sans-serif
         font-size: 16px
         margin: 5px 0
     &__input
+        width: 100%
+        min-width: 200px
         height: 34px
         font-family: Arial, Helvetica, sans-serif
         font-size: 18px
@@ -110,14 +121,14 @@
             outline-style: solid
             outline-width: 1px
     &__select
-        box-sizing: content-box
-        min-width: none
+        width: 100%
+        min-width: 200px
         height: 34px
         font-family: Arial, Helvetica, sans-serif
         font-size: 18px
         border-style: none
         border-radius: 3px
-        border-color: #dbdbdb
+        border-color: #c9c9c9
         border-style: solid
         border-width: 1px
         background-color: #ffffff00
@@ -126,13 +137,50 @@
             outline-color: #b8b8b8
             outline-style: solid
             outline-width: 1px
+    &__item-title
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 16px
+        margin: 5px 0
     &__option
         font-size: 16px
         color: #3d3d3d
-    &__SMS
-        margin-top: 40px 
+    &__sms
+        margin:  35px 10px 0 10px
     &__checkbox
         margin-right: 5px
+    &__send-block
+        background: #ffffffcb
+        width: 100%
+        padding: 50px 80px
+    &__legend
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 16px
+        font-weight: 400
+        text-align: right
+        // font-style: italic
+        margin-bottom: 15px
+        color: #636363
+    &__button-box
+        margin-top: 35px
+        padding: 10px
+        align-self: flex-end
+        width: 100%
+        max-width: 400px
+    &__button
+        height: 34px
+        width: 100%
+        border: none
+        border-radius: 4px 
+        background: linear-gradient(45deg, #5d73bb 0%, #478dbb 100%)
+        background-color: #344fc9
+        font-family: Arial, Helvetica, sans-serif
+        font-size: 18px
+        font-weight: 400
+        color: #ffffff
+        &:hover
+            background: #3c58d8
+        
+        
 
 
 
@@ -160,7 +208,7 @@
     .form
         &__title
             margin: 0 20px //   !
-        &__body
+        &__attributes-block
             padding: 0 50px
             flex-direction: column
         &__attributes
@@ -169,9 +217,6 @@
         &__wrapper
             width: auto
             padding: 40px
-            &::before
-                content: ''
-                height: 0
 
 @media ( max-width: 467px )
     .form
