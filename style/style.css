@@ -3,8 +3,26 @@
           box-sizing: border-box;
 }
 
-section {
-  background: linear-gradient(85deg, #2024a1 0%, #309ebe 100%);
+body, html {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background: linear-gradient(-85deg, #5d73bb 0%, #478dbb 100%);
 }
 
 .form {
@@ -103,7 +121,7 @@ section {
   margin-top: 15px;
 }
 
-.form__subtitle {
+.form__box-title {
   margin: 10px 10px 30px 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -112,7 +130,7 @@ section {
   position: relative;
 }
 
-.form__subtitle::before {
+.form__box-title::before {
   content: '';
   height: 1px;
   width: 50px;
@@ -203,12 +221,6 @@ section {
   outline-width: 1px;
 }
 
-.form__item-title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  margin: 5px 0;
-}
-
 .form__option {
   font-size: 16px;
   color: #3d3d3d;
@@ -228,15 +240,6 @@ section {
   padding: 50px 80px;
 }
 
-.form__legend {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  text-align: right;
-  margin-bottom: 15px;
-  color: #636363;
-}
-
 .form__button-box {
   margin-top: 35px;
   padding: 10px;
@@ -244,6 +247,15 @@ section {
       align-self: flex-end;
   width: 100%;
   max-width: 400px;
+}
+
+.form__legend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: right;
+  margin-bottom: 15px;
+  color: #636363;
 }
 
 .form__button {
@@ -288,16 +300,8 @@ section {
   margin-right: 5px;
 }
 
-.gray {
-  color: #9e9e9e;
-}
-
 @media (max-width: 872px) {
-  .form__title {
-    margin: 0 20px;
-  }
   .form__attributes-block {
-    padding: 0 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -307,25 +311,17 @@ section {
     width: auto;
     padding: 40px 40px 50px 40px;
   }
-  .form__wrapper {
-    width: auto;
-    padding: 40px;
-  }
 }
 
 @media (max-width: 467px) {
   .form__title {
-    padding: 30px 20px;
-    margin: 0 5px;
+    margin: 0 0 20px 0;
   }
   .form__body {
     padding: 0 5px;
   }
   .form__attributes {
     padding: 40px 20px 50px 20px;
-  }
-  .form__wrapper {
-    padding: 40px 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
