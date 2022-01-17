@@ -13,7 +13,7 @@
         <header></header>
         <section class="form-section">       
             <div class="form">
-                <form class="form__body" action="#" method="post">               
+                <form class="form__body" action="#" method="post" name="clientForm">           
                     <div class="form__attributes-block">
                         <div class="form__attributes">
                             <div class="form__box">
@@ -65,6 +65,7 @@
                                     <div class="form__item">
                                         <label class="form__label" for="doctor">Лечащий врач</label>
                                         <select class="form__select" name="doctor" id="doctor">
+                                            <option class="form__option" value=""></option>
                                             <option class="form__option" value="Ivanov">Иванов</option>
                                             <option class="form__option" value="Saharov">Захаров</option>
                                             <option class="form__option" value="Chernishova">Чернышева</option>
@@ -115,9 +116,10 @@
                                     <div class="form__item">
                                         <label class="form__label" for="passport">Тип документа*</label>
                                         <select class="form__select" name="passport" id="passport">
-                                            <option class="form__option" value="Ivanov">Паспорт</option>
-                                            <option class="form__option" value="Saharov">Свидетельство о рождении</option>
-                                            <option class="form__option" value="Chernishova">Вод. удостоверение</option>
+                                            <option class="form__option" value=""></option>
+                                            <option class="form__option" value="passport">Паспорт</option>
+                                            <option class="form__option" value="birthCertificate">Свидетельство о рождении</option>
+                                            <option class="form__option" value="driverLicense">Вод. удостоверение</option>
                                         </select>
                                     </div>
                                 </div>
@@ -154,4 +156,5 @@
     <footer></footer>
     </div>
 </body>
+<script src="js/script.js"></script>
 </html>
