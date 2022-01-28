@@ -29,6 +29,33 @@ const passportIssueDate = clientForm.issueDate;
 console.log(passport.value);
 
 
+clientPhone.addEventListener("blur", function (event) {
+
+    validTel();
+
+});
+
+function validTel() {
+    if (clientPhone.value.split(' ').join('').length == 11 && 
+    isFinite(clientPhone.value.split(' ').join(''))) {
+        console.log('номер ok');
+    } else if (clientPhone.value.startsWith('+') && 
+    clientPhone.value.split(' ').join('').length == 12 && 
+    isFinite(clientPhone.value.split(' ').join(''))) {
+        console.log('номер ok +');
+    } else {
+        clientPhone.classList.add('error')
+        clientPhone.insertAdjacentHTML('afterend',
+        '<div class="error__descr">Не верный номер</div>');
+        clientPhone.addEventListener("focus", function (e) {
+            if ( document.querySelector('.error__descr') ) {
+                document.querySelector('.error__descr').remove();
+            }
+            clientPhone.classList.remove('error');
+        });
+    }
+}
+
 clientForm.addEventListener("submit", function (event) {
     if (!clientSurname.value || !clientName.value || !clientPhone.value 
         || !addressTown.value || !passportIssueDate.value || !clientBirthDate.value
@@ -36,6 +63,6 @@ clientForm.addEventListener("submit", function (event) {
         console.log("поле не заполнено");
         event.preventDefault();
     } else {
-        console.log("новый клиент создан всплывающее окно");
+        alert('Новый клиент создан!');
     }
 });

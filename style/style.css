@@ -171,6 +171,7 @@ body, html {
       -ms-flex: 1;
           flex: 1;
   margin: 10px 10px 0 10px;
+  position: relative;
 }
 
 .form__label {
@@ -298,6 +299,22 @@ body, html {
 
 .gender__radio {
   margin-right: 5px;
+}
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ff8484;
+  border-radius: 3px;
+  position: relative;
+}
+
+.error__descr {
+  color: #ff8484;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  bottom: -16px;
 }
 
 @media (max-width: 872px) {
