@@ -28,32 +28,29 @@ const passportIssueDate = clientForm.issueDate;
 
 console.log(passport.value);
 
-
 clientPhone.addEventListener("blur", function (event) {
-
-    validTel();
-
+    if (!validPhone()) { 
+        displayError(clientPhone, 'Не верный номер');
+    }
 });
 
-function validTel() {
-    if (clientPhone.value.split(' ').join('').length == 11 && 
-    isFinite(clientPhone.value.split(' ').join(''))) {
-        console.log('номер ok');
-    } else if (clientPhone.value.startsWith('+') && 
-    clientPhone.value.split(' ').join('').length == 12 && 
-    isFinite(clientPhone.value.split(' ').join(''))) {
-        console.log('номер ok +');
-    } else {
-        clientPhone.classList.add('error')
-        clientPhone.insertAdjacentHTML('afterend',
-        '<div class="error__descr">Не верный номер</div>');
-        clientPhone.addEventListener("focus", function (e) {
-            if ( document.querySelector('.error__descr') ) {
-                document.querySelector('.error__descr').remove();
-            }
-            clientPhone.classList.remove('error');
-        });
-    }
+function validPhone() {
+    let phone = clientPhone.value.split(' ').join('');
+    let cnt = phone.length;
+    return ((cnt == 11 || cnt == 12) && isFinite(phone));
+}
+
+function displayError(target, message) {
+    
+    target.classList.add('error')
+    target.insertAdjacentHTML('afterend',
+    '<div class="error__descr">' + message + '</div>');
+    target.addEventListener("focus", function (e) {
+        if ( document.querySelector('.error__descr') ) {
+            document.querySelector('.error__descr').remove();
+        }
+        target.classList.remove('error');
+    }); 
 }
 
 clientForm.addEventListener("submit", function (event) {
