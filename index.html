@@ -20,11 +20,13 @@
                                 <h1 class="form__title">Форма создания клиента</h1>
                                 <div class="form__item">
                                     <label class="form__label" for="surname">Фамилия*</label>
-                                    <input class="form__input" id="surname" name="surname" type="text">
+                                    <input class="form__input required" id="surname" name="surname" type="text">
+                                    <div class="error__descr"></div>
                                 </div>
                                 <div class="form__item">
                                     <label class="form__label" for="name">Имя*</label>
-                                    <input class="form__input" id="name" name="name" type="text">
+                                    <input class="form__input required" id="name" name="name" type="text">
+                                    <div class="error__descr"></div>
                                 </div>
                                 <div class="form__item">
                                     <label class="form__label" for="secondName">Отчество</label>
@@ -33,11 +35,13 @@
                                 <div class="form__item-wrapper">
                                     <div class="form__item">
                                         <label class="form__label" for="birthDate">Дата рождения*</label>
-                                        <input class="form__input" id="birthDate" name="birthDate" type="date">
+                                        <input class="form__input required" id="birthDate" name="birthDate" type="date">
+                                        <div class="error__descr"></div>
                                     </div>
                                     <div class="form__item">
                                         <label class="form__label" for="phone">Номер телефона*</label>
                                         <input class="form__input" id="phone" name="phone" type="tel" value="7 ">
+                                        <div class="error__descr"></div>
                                     </div>
                                 </div>
                                 <div class="form__item">
@@ -56,11 +60,12 @@
                                 <div class="form__item-wrapper">
                                     <div class="form__item">
                                         <label class="form__label" for="clientGroup">Группа клиентов*</label>
-                                        <select class="form__select" name="clientGroup" id="clientGroup" multiple>
+                                        <select class="form__select required" name="clientGroup" id="clientGroup" multiple>
                                             <option class="form__option" value="VIP">VIP</option>
                                             <option class="form__option" value="problematic">Проблемные</option>
                                             <option class="form__option" value="OMC">ОМС</option>
                                         </select>
+                                        <div class="error__descr"></div>
                                     </div>
                                     <div class="form__item">
                                         <label class="form__label" for="doctor">Лечащий врач</label>
@@ -98,7 +103,8 @@
                                 <div class="form__item-wrapper">
                                     <div class="form__item">
                                         <label class="form__label" for="town">Город*</label>
-                                        <input class="form__input" id="town" name="town" type="text">
+                                        <input class="form__input required" id="town" name="town" type="text">
+                                        <div class="error__descr"></div>
                                     </div>
                                     <div class="form__item">
                                         <label class="form__label" for="street">Улица</label>
@@ -115,12 +121,13 @@
                                 <div class="form__item-wrapper">
                                     <div class="form__item">
                                         <label class="form__label" for="passport">Тип документа*</label>
-                                        <select class="form__select" name="passport" id="passport">
+                                        <select class="form__select required" name="passport" id="passport">
                                             <option class="form__option" value=""></option>
                                             <option class="form__option" value="passport">Паспорт</option>
                                             <option class="form__option" value="birthCertificate">Свидетельство о рождении</option>
                                             <option class="form__option" value="driverLicense">Вод. удостоверение</option>
                                         </select>
+                                        <div class="error__descr"></div>
                                     </div>
                                 </div>
                                 <div class="form__item-wrapper">
@@ -138,7 +145,8 @@
                                     </div>
                                     <div class="form__item">
                                         <label class="form__label" for="issueDate">Дата выдачи*</label>
-                                        <input class="form__input" id="issueDate" name="issueDate" type="text">
+                                        <input class="form__input required" id="issueDate" name="issueDate" type="text">
+                                        <div class="error__descr"></div>
                                     </div>
                                 </div>  
                             </div>

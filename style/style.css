@@ -170,7 +170,7 @@ body, html {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 10px 10px 0 10px;
+  margin: 20px 10px 0 10px;
   position: relative;
 }
 
@@ -304,13 +304,13 @@ body, html {
 .error {
   border-style: solid;
   border-width: 2px;
-  border-color: #ff8484;
+  border-color: #e73855;
   border-radius: 3px;
   position: relative;
 }
 
 .error__descr {
-  color: #ff8484;
+  color: #e73855;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   position: absolute;
